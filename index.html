@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANSES - Administración Nacional de la Seguridad Social</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,246 +13,506 @@
 
     <!-- Header -->
     <header class="header" role="banner">
-        <div class="header-container">
-            <div class="logo">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect width='100' height='60' fill='%2300558B'/%3E%3Ctext x='50' y='35' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3EANSES%3C/text%3E%3C/svg%3E" 
-                     alt="Logo ANSES - Administración Nacional de la Seguridad Social">
-                <div class="logo-text">
-                    <span class="site-name">ANSES</span>
-                    <span class="site-subtitle">Administración Nacional de la Seguridad Social</span>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="government-branding">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%2300558B'/%3E%3Ctext x='50' y='18' font-family='Arial' font-size='8' fill='white' text-anchor='middle'%3EARGENTINA%3C/text%3E%3C/svg%3E" 
+                             alt="Gobierno de Argentina" class="government-logo">
+                        <span class="government-text">República Argentina</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="accessibility-btn" id="high-contrast-btn" aria-label="Activar modo alto contraste">
+                            <i class="fas fa-adjust" aria-hidden="true"></i>
+                            <span>Alto Contraste</span>
+                        </button>
+                        <button class="accessibility-btn" id="font-size-btn" aria-label="Aumentar tamaño de fuente">
+                            <i class="fas fa-text-height" aria-hidden="true"></i>
+                            <span>A+</span>
+                        </button>
+                        <a href="#accesibilidad" class="accessibility-link" aria-label="Información de accesibilidad">
+                            <i class="fas fa-universal-access" aria-hidden="true"></i>
+                            <span>Accesibilidad</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="header-actions">
-                <button class="accessibility-btn" id="high-contrast-btn" aria-label="Activar alto contraste">
-                    Alto Contraste
-                </button>
-                <button class="accessibility-btn" id="font-size-btn" aria-label="Aumentar tamaño de fuente">
-                    A+ 
-                </button>
+        </div>
+
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo-section">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%2300558B'/%3E%3Ctext x='100' y='35' font-family='Arial' font-size='20' fill='white' text-anchor='middle' font-weight='bold'%3EANSES%3C/text%3E%3C/svg%3E" 
+                             alt="ANSES - Administración Nacional de la Seguridad Social" class="main-logo">
+                        <div class="logo-text">
+                            <h1 class="site-title">ANSES</h1>
+                            <p class="site-subtitle">Administración Nacional de la Seguridad Social</p>
+                        </div>
+                    </div>
+                    
+                    <div class="header-tools">
+                        <div class="search-box">
+                            <form role="search" aria-label="Buscar en el sitio">
+                                <input type="text" placeholder="Buscar trámites, servicios..." aria-label="Texto a buscar">
+                                <button type="submit" aria-label="Buscar">
+                                    <i class="fas fa-search" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="user-actions">
+                            <a href="#mi-anses" class="btn btn-outline">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                Mi ANSES
+                            </a>
+                            <a href="#turnos" class="btn btn-primary">
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                Turnos Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Navegación principal -->
-    <nav class="nav-primary" aria-label="Navegación principal">
-        <div class="nav-container">
-            <ul class="main-menu" role="menubar">
-                <li class="menu-item-has-children" role="none">
-                    <button type="button" aria-expanded="false" aria-haspopup="true" role="menuitem" id="tramites-btn">
-                        Trámites <span class="arrow" aria-hidden="true">▾</span>
+    <nav class="main-navigation" aria-label="Navegación principal">
+        <div class="container">
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#inicio" class="nav-link" role="menuitem">
+                        <i class="fas fa-home" aria-hidden="true"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item has-dropdown" role="none">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                        <i class="fas fa-file-alt" aria-hidden="true"></i>
+                        Trámites
+                        <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
                     </button>
-                    <ul class="submenu" role="menu" aria-labelledby="tramites-btn">
-                        <li role="none"><a href="#" role="menuitem">Asignaciones Familiares</a></li>
-                        <li role="none"><a href="#" role="menuitem">Jubilaciones y Pensiones</a></li>
-                        <li role="none"><a href="#" role="menuitem">Prestaciones por Desempleo</a></li>
-                        <li role="none"><a href="#" role="menuitem">Ayuda Escolar</a></li>
+                    <ul class="dropdown-menu" role="menu" aria-label="Submenú de trámites">
+                        <li role="none"><a href="#jubilaciones" role="menuitem">Jubilaciones y Pensiones</a></li>
+                        <li role="none"><a href="#asignaciones" role="menuitem">Asignaciones Familiares</a></li>
+                        <li role="none"><a href="#auh" role="menuitem">AUH - Asignación Universal por Hijo</a></li>
+                        <li role="none"><a href="#aue" role="menuitem">AUE - Asignación Universal por Embarazo</a></li>
+                        <li role="none"><a href="#desempleo" role="menuitem">Prestación por Desempleo</a></li>
+                        <li role="none"><a href="#progresar" role="menuitem">PROGRESAR</a></li>
                     </ul>
                 </li>
-                <li role="none"><a href="#" role="menuitem">Prestaciones</a></li>
-                <li role="none"><a href="#" role="menuitem">Servicios Digitales</a></li>
-                <li role="none"><a href="#" role="menuitem">Atención al Ciudadano</a></li>
-                <li role="none"><a href="#" role="menuitem">Institucional</a></li>
+                <li class="nav-item has-dropdown" role="none">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false" aria-haspopup="true" role="menuitem">
+                        <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
+                        Prestaciones
+                        <i class="fas fa-chevron-down dropdown-icon" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-label="Submenú de prestaciones">
+                        <li role="none"><a href="#calendario-pagos" role="menuitem">Calendario de Pagos</a></li>
+                        <li role="none"><a href="#consultar-pagos" role="menuitem">Consultar Pagos</a></li>
+                        <li role="none"><a href="#beneficios" role="menuitem">Beneficios Sociales</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#servicios-digitales" class="nav-link" role="menuitem">
+                        <i class="fas fa-laptop" aria-hidden="true"></i>
+                        Servicios Digitales
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#atencion" class="nav-link" role="menuitem">
+                        <i class="fas fa-headset" aria-hidden="true"></i>
+                        Atención Ciudadana
+                    </a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#institucional" class="nav-link" role="menuitem">
+                        <i class="fas fa-university" aria-hidden="true"></i>
+                        Institucional
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!-- Contenido principal -->
     <main id="main-content" role="main">
-        <!-- Banner hero -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <h1 id="hero-title">Bienvenido a ANSES</h1>
-                <p>Accedé a todos los trámites y servicios de la seguridad social de manera simple y segura</p>
-                <a href="#quick-access" class="btn">Ver trámites rápidos</a>
-            </div>
-        </section>
-
-        <!-- Trámites rápidos -->
-        <section id="quick-access" class="quick-access" aria-labelledby="quick-access-title">
-            <h2 id="quick-access-title" class="section-title">Trámites y Servicios Rápidos</h2>
-            <div class="quick-access-grid">
-                <article class="quick-access-card">
-                    <h3>Mi ANSES</h3>
-                    <p>Accedé a tu cuenta personal con todos tus trámites y beneficios</p>
-                    <a href="#" class="btn" aria-label="Acceder a Mi ANSES">Ingresar</a>
-                </article>
-                <article class="quick-access-card">
-                    <h3>Asignación Universal por Hijo</h3>
-                    <p>Gestioná la asignación y presentá la libreta escolar</p>
-                    <a href="#" class="btn" aria-label="Gestionar Asignación Universal por Hijo">Gestionar</a>
-                </article>
-                <article class="quick-access-card">
-                    <h3>Jubilaciones</h3>
-                    <p>Consultá tu estado y realizá trámites de jubilación</p>
-                    <a href="#" class="btn" aria-label="Consultar Jubilaciones">Consultar</a>
-                </article>
-                <article class="quick-access-card">
-                    <h3>Turnos Web</h3>
-                    <p>Sacá tu turno para atención presencial</p>
-                    <a href="#" class="btn" aria-label="Sacar turno web">Sacar Turno</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Carrusel de noticias -->
-        <section class="news-carousel" aria-labelledby="carousel-title">
-            <h2 id="carousel-title" class="section-title">Novedades Importantes</h2>
-            <div class="carousel-container" role="region" aria-label="Carrusel de noticias">
+        <!-- Carrusel Hero -->
+        <section class="hero-carousel" aria-label="Carrusel de noticias importantes">
+            <div class="carousel-container">
                 <div class="carousel-track" aria-live="polite">
-                    <div class="carousel-slide active" role="group" aria-label="Slide 1 de 3">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23009DE0'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3ENueva actualización%3C/text%3E%3C/svg%3E" 
-                             alt="Nueva actualización de requisitos para asignaciones familiares">
-                        <div class="slide-content">
-                            <h3>Nuevos Requisitos 2024</h3>
-                            <p>Actualización de los requisitos y documentación necesaria para el año 2024.</p>
-                            <a href="#" class="btn">Leer más</a>
+                    <div class="carousel-slide active" role="group" aria-label="Slide 1 de 3: Nuevo calendario de pagos">
+                        <div class="slide-background">
+                            <div class="slide-content">
+                                <div class="slide-badge">Novedad</div>
+                                <h2 class="slide-title">Nuevo Calendario de Pagos 2024</h2>
+                                <p class="slide-description">Consultá las fechas de pago para todos los beneficios. Agendá tus fechas y organizá tu economía.</p>
+                                <div class="slide-actions">
+                                    <a href="#calendario" class="btn btn-light">Ver Calendario</a>
+                                    <a href="#descargar" class="btn btn-outline-light">Descargar PDF</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-slide" role="group" aria-label="Slide 2 de 3">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23FF6B00'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EMejoras en turnos%3C/text%3E%3C/svg%3E" 
-                             alt="Mejoras en el sistema de turnos online">
-                        <div class="slide-content">
-                            <h3>Mejoras en Turnos Online</h3>
-                            <p>Nuevas funcionalidades para agilizar la gestión de turnos presenciales.</p>
-                            <a href="#" class="btn">Leer más</a>
+                    
+                    <div class="carousel-slide" role="group" aria-label="Slide 2 de 3: Mi ANSES digital">
+                        <div class="slide-background">
+                            <div class="slide-content">
+                                <div class="slide-badge">Digital</div>
+                                <h2 class="slide-title">Mi ANSES 100% Digital</h2>
+                                <p class="slide-description">Realizá tus trámites online sin moverte de tu casa. Rápido, seguro y sin filas.</p>
+                                <div class="slide-actions">
+                                    <a href="#mi-anses" class="btn btn-light">Ingresar a Mi ANSES</a>
+                                    <a href="#tutoriales" class="btn btn-outline-light">Ver Tutoriales</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel-slide" role="group" aria-label="Slide 3 de 3">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23388E3C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EPagos actualizados%3C/text%3E%3C/svg%3E" 
-                             alt="Calendario de pagos actualizado">
-                        <div class="slide-content">
-                            <h3>Calendario de Pagos 2024</h3>
-                            <p>Consultá las fechas de pago para todos los beneficios del año 2024.</p>
-                            <a href="#" class="btn">Leer más</a>
+                    
+                    <div class="carousel-slide" role="group" aria-label="Slide 3 de 3: Constancia de CUIL">
+                        <div class="slide-background">
+                            <div class="slide-content">
+                                <div class="slide-badge">Trámite Rápido</div>
+                                <h2 class="slide-title">Constancia de CUIL Online</h2>
+                                <p class="slide-description">Obtené tu constancia de CUIL instantáneamente. Válida para todos los trámites.</p>
+                                <div class="slide-actions">
+                                    <a href="#cuil" class="btn btn-light">Obtener Constancia</a>
+                                    <a href="#consultar-cuil" class="btn btn-outline-light">Consultar CUIL</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-prev" aria-label="Slide anterior">‹</button>
-                <button class="carousel-next" aria-label="Slide siguiente">›</button>
+                
+                <button class="carousel-control prev" aria-label="Slide anterior">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="carousel-control next" aria-label="Slide siguiente">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                
                 <div class="carousel-indicators" role="tablist">
-                    <button class="indicator active" role="tab" aria-selected="true" aria-label="Slide 1">•</button>
-                    <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 2">•</button>
-                    <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 3">•</button>
+                    <button class="indicator active" role="tab" aria-selected="true" aria-label="Ir al slide 1"></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-label="Ir al slide 2"></button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-label="Ir al slide 3"></button>
                 </div>
             </div>
         </section>
 
-        <!-- Tabla de beneficios -->
-        <section class="benefits-table" aria-labelledby="table-title">
-            <h2 id="table-title" class="section-title">Beneficios Disponibles</h2>
-            <div class="table-container">
-                <table role="grid" aria-label="Tabla de beneficios y requisitos">
-                    <thead>
-                        <tr>
-                            <th scope="col">Beneficio</th>
-                            <th scope="col">Requisitos</th>
-                            <th scope="col">Monto</th>
-                            <th scope="col">Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">AUH</th>
-                            <td>Hijos menores de 18 años</td>
-                            <td>$15,000</td>
-                            <td><a href="#" class="btn-small">Solicitar</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Jubilación</th>
-                            <td>65 años y 30 aportes</td>
-                            <td>$80,000</td>
-                            <td><a href="#" class="btn-small">Consultar</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Desempleo</th>
-                            <td>Despido sin causa</td>
-                            <td>$25,000</td>
-                            <td><a href="#" class="btn-small">Aplicar</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Trámites Rápidos -->
+        <section class="quick-services" aria-labelledby="quick-services-title">
+            <div class="container">
+                <h2 id="quick-services-title" class="section-title">Trámites y Servicios Rápidos</h2>
+                <div class="services-grid">
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-id-card" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Constancia de CUIL</h3>
+                        <p class="service-description">Obtené tu constancia de CUIL al instante</p>
+                        <a href="#constancia-cuil" class="service-link" aria-label="Obtener Constancia de CUIL">Obtener Constancia</a>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Turnos Web</h3>
+                        <p class="service-description">Sacá turno para atención presencial</p>
+                        <a href="#turnos" class="service-link" aria-label="Sacar turno web">Sacar Turno</a>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Consultar Pagos</h3>
+                        <p class="service-description">Revisá el estado de tus pagos y beneficios</p>
+                        <a href="#pagos" class="service-link" aria-label="Consultar pagos">Consultar</a>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-user-edit" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Actualizar Datos</h3>
+                        <p class="service-description">Actualizá tu información personal</p>
+                        <a href="#actualizar-datos" class="service-link" aria-label="Actualizar datos personales">Actualizar</a>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Ayuda Escolar</h3>
+                        <p class="service-description">Gestioná la ayuda escolar anual</p>
+                        <a href="#ayuda-escolar" class="service-link" aria-label="Gestionar ayuda escolar">Gestionar</a>
+                    </article>
+                    
+                    <article class="service-card" tabindex="0">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="service-title">Asignaciones</h3>
+                        <p class="service-description">Consultá y gestioná asignaciones familiares</p>
+                        <a href="#asignaciones" class="service-link" aria-label="Gestionar asignaciones familiares">Gestionar</a>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- Formulario de contacto -->
-        <section class="contact-form" aria-labelledby="form-title">
-            <h2 id="form-title" class="section-title">Consultas y Contacto</h2>
-            <form class="form" aria-labelledby="form-title">
-                <div class="form-group">
-                    <label for="nombre" class="required">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" 
-                           aria-required="true" required
-                           aria-describedby="nombre-help">
-                    <span id="nombre-help" class="help-text">Ingrese su nombre completo</span>
+        <!-- Sección de Constancia CUIL -->
+        <section class="cuil-section" aria-labelledby="cuil-title">
+            <div class="container">
+                <div class="cuil-container">
+                    <div class="cuil-content">
+                        <h2 id="cuil-title" class="section-title">Constancia de CUIL Online</h2>
+                        <p class="cuil-description">Obtené tu constancia de CUIL de manera instantánea y gratuita. Válida para todos los trámites.</p>
+                        
+                        <div class="cuil-features">
+                            <div class="feature">
+                                <i class="fas fa-bolt" aria-hidden="true"></i>
+                                <span>Inmediato</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-lock" aria-hidden="true"></i>
+                                <span>Seguro</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-print" aria-hidden="true"></i>
+                                <span>Imprimible</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <span>Oficial</span>
+                            </div>
+                        </div>
+                        
+                        <form class="cuil-form" id="cuil-form" aria-labelledby="cuil-title">
+                            <div class="form-group">
+                                <label for="dni" class="required">Número de DNI</label>
+                                <input type="text" id="dni" name="dni" 
+                                       placeholder="Ingresá tu DNI sin puntos"
+                                       aria-required="true" required
+                                       aria-describedby="dni-help"
+                                       pattern="[0-9]{7,8}"
+                                       maxlength="8">
+                                <span id="dni-help" class="help-text">Ingresá tu DNI sin puntos ni espacios</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="genero" class="required">Género</label>
+                                <select id="genero" name="genero" aria-required="true" required>
+                                    <option value="">Seleccioná tu género</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="X">No Binario</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="terminos" aria-required="true" required>
+                                    <span>Acepto los términos y condiciones</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-download" aria-hidden="true"></i>
+                                Obtener Constancia
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="cuil-preview">
+                        <div class="preview-card">
+                            <div class="preview-header">
+                                <h3>Constancia de CUIL - ANSES</h3>
+                                <div class="preview-badge">Vista Previa</div>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-field">
+                                    <span class="field-label">Nombre completo:</span>
+                                    <span class="field-value">[Se completará automáticamente]</span>
+                                </div>
+                                <div class="preview-field">
+                                    <span class="field-label">DNI:</span>
+                                    <span class="field-value">[Se completará automáticamente]</span>
+                                </div>
+                                <div class="preview-field">
+                                    <span class="field-label">CUIL:</span>
+                                    <span class="field-value">[Se generará automáticamente]</span>
+                                </div>
+                                <div class="preview-field">
+                                    <span class="field-label">Fecha de emisión:</span>
+                                    <span class="field-value" id="fecha-preview">--/--/----</span>
+                                </div>
+                                <div class="preview-qr">
+                                    <div class="qr-placeholder">
+                                        <i class="fas fa-qrcode" aria-hidden="true"></i>
+                                        <span>Código QR</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label for="email" class="required">Correo electrónico</label>
-                    <input type="email" id="email" name="email" 
-                           aria-required="true" required
-                           aria-describedby="email-error">
-                    <span id="email-error" class="error-text" aria-live="polite"></span>
+        <!-- Noticias y Novedades -->
+        <section class="news-section" aria-labelledby="news-title">
+            <div class="container">
+                <h2 id="news-title" class="section-title">Novedades y Noticias</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%2300558B'/%3E%3Ctext x='200' y='125' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3ECalendario de Pagos%3C/text%3E%3C/svg%3E" 
+                                 alt="Calendario de pagos actualizado para el mes en curso">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2024-01-15" class="news-date">15 de Enero, 2024</time>
+                            <h3 class="news-card-title">Nuevo Calendario de Pagos 2024</h3>
+                            <p class="news-excerpt">Se publicó el calendario oficial de pagos para todos los beneficios del año 2024.</p>
+                            <a href="#noticia-completa" class="news-link">Leer más</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23009DE0'/%3E%3Ctext x='200' y='125' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EMi ANSES Digital%3C/text%3E%3C/svg%3E" 
+                                 alt="Mejoras en la plataforma Mi ANSES digital">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2024-01-10" class="news-date">10 de Enero, 2024</time>
+                            <h3 class="news-card-title">Mejoras en Mi ANSES Digital</h3>
+                            <p class="news-excerpt">Nueva interfaz y funcionalidades en la plataforma online para mejor experiencia.</p>
+                            <a href="#noticia-completa" class="news-link">Leer más</a>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23FF6B00'/%3E%3Ctext x='200' y='125' font-family='Arial' font-size='16' fill='white' text-anchor='middle'%3EAccesibilidad%3C/text%3E%3C/svg%3E" 
+                                 alt="Nuevas funciones de accesibilidad en el sitio">
+                        </div>
+                        <div class="news-content">
+                            <time datetime="2024-01-05" class="news-date">5 de Enero, 2024</time>
+                            <h3 class="news-card-title">Nuevas Herramientas de Accesibilidad</h3>
+                            <p class="news-excerpt">Implementamos nuevas funciones para mejorar la experiencia de usuarios con discapacidad.</p>
+                            <a href="#noticia-completa" class="news-link">Leer más</a>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <div class="form-group">
-                    <label for="consulta" class="required">Tipo de consulta</label>
-                    <select id="consulta" name="consulta" required>
-                        <option value="">Seleccione una opción</option>
-                        <option value="jubilacion">Jubilación</option>
-                        <option value="asignacion">Asignación Familiar</option>
-                        <option value="turno">Turno</option>
-                        <option value="otro">Otro</option>
-                    </select>
+        <!-- Accesibilidad Section -->
+        <section id="accesibilidad" class="accessibility-section" aria-labelledby="accessibility-title">
+            <div class="container">
+                <h2 id="accessibility-title" class="section-title">Accesibilidad</h2>
+                <div class="accessibility-content">
+                    <div class="accessibility-info">
+                        <h3>Nuestro Compromiso con la Inclusión</h3>
+                        <p>En ANSES trabajamos para que todas las personas, independientemente de sus capacidades, puedan acceder a nuestros servicios de manera simple y segura.</p>
+                        
+                        <div class="accessibility-features">
+                            <div class="acc-feature">
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                                <h4>Alto Contraste</h4>
+                                <p>Modo de visualización para personas con baja visión</p>
+                            </div>
+                            <div class="acc-feature">
+                                <i class="fas fa-text-height" aria-hidden="true"></i>
+                                <h4>Tamaño de Texto</h4>
+                                <p>Control del tamaño de fuente para mejor legibilidad</p>
+                            </div>
+                            <div class="acc-feature">
+                                <i class="fas fa-keyboard" aria-hidden="true"></i>
+                                <h4>Navegación por Teclado</h4>
+                                <p>Acceso completo sin necesidad de mouse</p>
+                            </div>
+                            <div class="acc-feature">
+                                <i class="fas fa-assistive-listening-systems" aria-hidden="true"></i>
+                                <h4>Lectores de Pantalla</h4>
+                                <p>Compatible con NVDA, JAWS, VoiceOver y otros</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="mensaje" class="required">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="newsletter" aria-describedby="newsletter-help">
-                        Deseo recibir novedades por correo electrónico
-                    </label>
-                    <span id="newsletter-help" class="help-text">Puede desuscribirse en cualquier momento</span>
-                </div>
-
-                <button type="submit" class="btn">Enviar Consulta</button>
-            </form>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
-        <div class="footer-grid">
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <ul class="footer-links">
-                    <li><a href="tel:0800-222-6737">0800-222-ANSES (26737)</a></li>
-                    <li><a href="mailto:consultas@anses.gob.ar">consultas@anses.gob.ar</a></li>
-                    <li><a href="#">Centros de Atención</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Trámites</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Jubilaciones y Pensiones</a></li>
-                    <li><a href="#">Asignaciones Familiares</a></li>
-                    <li><a href="#">Prestaciones por Desempleo</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Información Útil</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Formularios y Solicitudes</a></li>
-                    <li><a href="#">Normativa Legal</a></li>
-                </ul>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <h3 class="footer-title">Contacto</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                <a href="tel:0800-222-6737">0800-222-ANSES (26737)</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:consultas@anses.gob.ar">consultas@anses.gob.ar</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <a href="#centros-atencion">Centros de Atención</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3 class="footer-title">Trámites</h3>
+                        <ul class="footer-links">
+                            <li><a href="#jubilaciones">Jubilaciones y Pensiones</a></li>
+                            <li><a href="#asignaciones">Asignaciones Familiares</a></li>
+                            <li><a href="#auh">AUH</a></li>
+                            <li><a href="#desempleo">Prestación por Desempleo</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3 class="footer-title">Servicios Digitales</h3>
+                        <ul class="footer-links">
+                            <li><a href="#mi-anses">Mi ANSES</a></li>
+                            <li><a href="#turnos-web">Turnos Web</a></li>
+                            <li><a href="#constancia-cuil">Constancia CUIL</a></li>
+                            <li><a href="#app-movil">App Móvil</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3 class="footer-title">Información Útil</h3>
+                        <ul class="footer-links">
+                            <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                            <li><a href="#formularios">Formularios</a></li>
+                            <li><a href="#normativa">Normativa Legal</a></li>
+                            <li><a href="#accesibilidad">Accesibilidad</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>&copy; 2024 ANSES - Administración Nacional de la Seguridad Social. Todos los derechos reservados.</p>
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 ANSES - Administración Nacional de la Seguridad Social. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-government">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' fill='%2300558B'/%3E%3Ctext x='50' y='18' font-family='Arial' font-size='8' fill='white' text-anchor='middle'%3EARGENTINA%3C/text%3E%3C/svg%3E" 
+                             alt="Gobierno de Argentina" class="footer-government-logo">
+                        <span>República Argentina</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
