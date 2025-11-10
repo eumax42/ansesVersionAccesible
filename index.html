@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANSES - Administración Nacional de la Seguridad Social</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip link para navegación por teclado -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect width='100' height='60' fill='%2300558B'/%3E%3Ctext x='50' y='35' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3EANSES%3C/text%3E%3C/svg%3E" 
+                     alt="Logo ANSES - Administración Nacional de la Seguridad Social">
+                <div class="logo-text">
+                    <span class="site-name">ANSES</span>
+                    <span class="site-subtitle">Administración Nacional de la Seguridad Social</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="accessibility-btn" id="high-contrast-btn" aria-label="Activar alto contraste">
+                    Alto Contraste
+                </button>
+                <button class="accessibility-btn" id="font-size-btn" aria-label="Aumentar tamaño de fuente">
+                    A+ 
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav class="nav-primary" aria-label="Navegación principal">
+        <div class="nav-container">
+            <ul class="main-menu" role="menubar">
+                <li class="menu-item-has-children" role="none">
+                    <button type="button" aria-expanded="false" aria-haspopup="true" role="menuitem" id="tramites-btn">
+                        Trámites <span class="arrow" aria-hidden="true">▾</span>
+                    </button>
+                    <ul class="submenu" role="menu" aria-labelledby="tramites-btn">
+                        <li role="none"><a href="#" role="menuitem">Asignaciones Familiares</a></li>
+                        <li role="none"><a href="#" role="menuitem">Jubilaciones y Pensiones</a></li>
+                        <li role="none"><a href="#" role="menuitem">Prestaciones por Desempleo</a></li>
+                        <li role="none"><a href="#" role="menuitem">Ayuda Escolar</a></li>
+                    </ul>
+                </li>
+                <li role="none"><a href="#" role="menuitem">Prestaciones</a></li>
+                <li role="none"><a href="#" role="menuitem">Servicios Digitales</a></li>
+                <li role="none"><a href="#" role="menuitem">Atención al Ciudadano</a></li>
+                <li role="none"><a href="#" role="menuitem">Institucional</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="main-content" role="main">
+        <!-- Banner hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Bienvenido a ANSES</h1>
+                <p>Accedé a todos los trámites y servicios de la seguridad social de manera simple y segura</p>
+                <a href="#quick-access" class="btn">Ver trámites rápidos</a>
+            </div>
+        </section>
+
+        <!-- Trámites rápidos -->
+        <section id="quick-access" class="quick-access" aria-labelledby="quick-access-title">
+            <h2 id="quick-access-title" class="section-title">Trámites y Servicios Rápidos</h2>
+            <div class="quick-access-grid">
+                <article class="quick-access-card">
+                    <h3>Mi ANSES</h3>
+                    <p>Accedé a tu cuenta personal con todos tus trámites y beneficios</p>
+                    <a href="#" class="btn" aria-label="Acceder a Mi ANSES">Ingresar</a>
+                </article>
+                <article class="quick-access-card">
+                    <h3>Asignación Universal por Hijo</h3>
+                    <p>Gestioná la asignación y presentá la libreta escolar</p>
+                    <a href="#" class="btn" aria-label="Gestionar Asignación Universal por Hijo">Gestionar</a>
+                </article>
+                <article class="quick-access-card">
+                    <h3>Jubilaciones</h3>
+                    <p>Consultá tu estado y realizá trámites de jubilación</p>
+                    <a href="#" class="btn" aria-label="Consultar Jubilaciones">Consultar</a>
+                </article>
+                <article class="quick-access-card">
+                    <h3>Turnos Web</h3>
+                    <p>Sacá tu turno para atención presencial</p>
+                    <a href="#" class="btn" aria-label="Sacar turno web">Sacar Turno</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Carrusel de noticias -->
+        <section class="news-carousel" aria-labelledby="carousel-title">
+            <h2 id="carousel-title" class="section-title">Novedades Importantes</h2>
+            <div class="carousel-container" role="region" aria-label="Carrusel de noticias">
+                <div class="carousel-track" aria-live="polite">
+                    <div class="carousel-slide active" role="group" aria-label="Slide 1 de 3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23009DE0'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3ENueva actualización%3C/text%3E%3C/svg%3E" 
+                             alt="Nueva actualización de requisitos para asignaciones familiares">
+                        <div class="slide-content">
+                            <h3>Nuevos Requisitos 2024</h3>
+                            <p>Actualización de los requisitos y documentación necesaria para el año 2024.</p>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" role="group" aria-label="Slide 2 de 3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23FF6B00'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EMejoras en turnos%3C/text%3E%3C/svg%3E" 
+                             alt="Mejoras en el sistema de turnos online">
+                        <div class="slide-content">
+                            <h3>Mejoras en Turnos Online</h3>
+                            <p>Nuevas funcionalidades para agilizar la gestión de turnos presenciales.</p>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" role="group" aria-label="Slide 3 de 3">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23388E3C'/%3E%3Ctext x='200' y='100' font-family='Arial' font-size='18' fill='white' text-anchor='middle'%3EPagos actualizados%3C/text%3E%3C/svg%3E" 
+                             alt="Calendario de pagos actualizado">
+                        <div class="slide-content">
+                            <h3>Calendario de Pagos 2024</h3>
+                            <p>Consultá las fechas de pago para todos los beneficios del año 2024.</p>
+                            <a href="#" class="btn">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-prev" aria-label="Slide anterior">‹</button>
+                <button class="carousel-next" aria-label="Slide siguiente">›</button>
+                <div class="carousel-indicators" role="tablist">
+                    <button class="indicator active" role="tab" aria-selected="true" aria-label="Slide 1">•</button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 2">•</button>
+                    <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 3">•</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de beneficios -->
+        <section class="benefits-table" aria-labelledby="table-title">
+            <h2 id="table-title" class="section-title">Beneficios Disponibles</h2>
+            <div class="table-container">
+                <table role="grid" aria-label="Tabla de beneficios y requisitos">
+                    <thead>
+                        <tr>
+                            <th scope="col">Beneficio</th>
+                            <th scope="col">Requisitos</th>
+                            <th scope="col">Monto</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">AUH</th>
+                            <td>Hijos menores de 18 años</td>
+                            <td>$15,000</td>
+                            <td><a href="#" class="btn-small">Solicitar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Jubilación</th>
+                            <td>65 años y 30 aportes</td>
+                            <td>$80,000</td>
+                            <td><a href="#" class="btn-small">Consultar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Desempleo</th>
+                            <td>Despido sin causa</td>
+                            <td>$25,000</td>
+                            <td><a href="#" class="btn-small">Aplicar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="contact-form" aria-labelledby="form-title">
+            <h2 id="form-title" class="section-title">Consultas y Contacto</h2>
+            <form class="form" aria-labelledby="form-title">
+                <div class="form-group">
+                    <label for="nombre" class="required">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" 
+                           aria-required="true" required
+                           aria-describedby="nombre-help">
+                    <span id="nombre-help" class="help-text">Ingrese su nombre completo</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="required">Correo electrónico</label>
+                    <input type="email" id="email" name="email" 
+                           aria-required="true" required
+                           aria-describedby="email-error">
+                    <span id="email-error" class="error-text" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="consulta" class="required">Tipo de consulta</label>
+                    <select id="consulta" name="consulta" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="jubilacion">Jubilación</option>
+                        <option value="asignacion">Asignación Familiar</option>
+                        <option value="turno">Turno</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje" class="required">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="newsletter" aria-describedby="newsletter-help">
+                        Deseo recibir novedades por correo electrónico
+                    </label>
+                    <span id="newsletter-help" class="help-text">Puede desuscribirse en cualquier momento</span>
+                </div>
+
+                <button type="submit" class="btn">Enviar Consulta</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:0800-222-6737">0800-222-ANSES (26737)</a></li>
+                    <li><a href="mailto:consultas@anses.gob.ar">consultas@anses.gob.ar</a></li>
+                    <li><a href="#">Centros de Atención</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Trámites</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Jubilaciones y Pensiones</a></li>
+                    <li><a href="#">Asignaciones Familiares</a></li>
+                    <li><a href="#">Prestaciones por Desempleo</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Información Útil</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Formularios y Solicitudes</a></li>
+                    <li><a href="#">Normativa Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ANSES - Administración Nacional de la Seguridad Social. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
